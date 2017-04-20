@@ -29,6 +29,8 @@ gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'paperclip'
+
 group :development, :test do
     gem 'byebug', platform: :mri
 end
