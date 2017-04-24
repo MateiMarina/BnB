@@ -29,12 +29,12 @@ class ReservationsController < ApplicationController
 				business: 'i.marina.16-facilitator@aberdeen.ac.uk',
 				cmd: '_xclick',
 				upload: 1,
-				notify_url: ' http://274af4a8.ngrok.io/notify',
+				notify_url: 'http://4c4d5b72.ngrok.io/notify',
 				amount: @reservation.total,
 				item_name: @reservation.room.listing_name,
 				item_number: @reservation.id,
 				quantity: '1',
-				return: ' http://274af4a8.ngrok.io/your_trips'
+				return: 'http://4c4d5b72.ngrok.io/your_trips'
 			}
 
 			redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
@@ -61,7 +61,7 @@ class ReservationsController < ApplicationController
 
 	protect_from_forgery except: [:your_trips]
 	def your_trips
-		@trips = current_user.reservations.where("status = ?", true)
+		@trips = current_user.reservations
 	end
 
 	def your_reservations

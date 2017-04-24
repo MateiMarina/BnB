@@ -3,4 +3,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@rooms = @user.rooms
 	end
+    
+    def index
+	  @user = User.all
+    end
 end

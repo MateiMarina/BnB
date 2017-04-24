@@ -122,7 +122,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  config.allow_unconfirmed_access_for = 365.days
+  config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
@@ -275,6 +275,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :facebook, '779424975550648', '9952751e56d4f365f5ebea0cd6812723', scope: 'email'
+  config.omniauth :facebook, '363671440700870', 'a920b850120a17d13a621d16b760c9dd', scope: 'email'
+  # config.omniauth :facebook, '412897105750080', 'bd7a8f3bbe775be0c5a2b388e6e2cc98', scope: 'email'
 
 end
